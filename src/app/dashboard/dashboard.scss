@@ -1,0 +1,120 @@
+.top {
+  background: linear-gradient(90deg, #FBCE47 0%, #F6A311 98.53%);
+  border-radius: 16px;
+  height: 118px;
+  padding-top: 8px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.text h1 {
+  color: rgba(63, 63, 63, 1);
+  font-weight: 600;
+}
+
+.text h6 {
+  color: rgba(94, 94, 94, 1);
+  font-weight: 500;
+}
+
+.btn {
+  border: none;
+  color: rgba(134, 131, 131, 1);
+}
+
+.card {
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+  border-bottom: black;
+
+
+
+}
+
+.card:hover {
+  transform: translatey(-4px);
+  box-shadow: 0px 4px 12px rgba(99, 25, 25, 0.1);
+ 
+}
+.badge-number {
+   background:linear-gradient(180deg, #F0CC59 0%, #FCDF88 100%);
+
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px; 
+  font-size: 1rem;
+  
+
+  text-align: center;
+}
+
+
+@media (max-width: 992px) {
+  .top {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .top img {
+    width: 48px !important;
+    height: 48px !important;
+    margin-bottom: 8px;
+  }
+
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text h6 {
+    margin-left: 0 !important;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text h1 {
+    font-size: 1.3rem;
+  }
+
+  .text h6 {
+    font-size: 0.85rem;
+  }
+
+  .card {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .top {
+    padding: 10px;
+  }
+
+  .top img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .text h1 {
+    font-size: 1.2rem;
+  }
+
+  .text h6 {
+    font-size: 0.8rem;
+  }
+
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+}

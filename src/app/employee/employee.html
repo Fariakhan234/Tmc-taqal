@@ -1,0 +1,98 @@
+<div class="container top">
+  <div class="row">
+    <div class="col-12 layout d-flex justify-content-between align-items-center">
+      <h1>Users</h1>
+      <button class="btn button" (click)="openmodel()">
+        <i class="bi bi-plus-circle me-1"></i> Add Users
+      </button>
+    </div>
+  </div>
+</div>
+<div class="modal fade"
+  #newModel
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add users</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="p-4 b  " style="max-width: 500px; margin: auto;">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter full name" require name="name" [(ngModel)]="empobj.name">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email"  required  name="email"        [(ngModel)]="empobj.email">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter password "  required name="password" [(ngModel)]="empobj.password">
+  </div>
+
+  <div class="mb-3">
+    <label for="role" class="form-label">Role</label>
+    <select class="form-select" id="role" required>
+      <option value="" selected disabled>Select role</option>
+      <option value="admin">Admin</option>
+      <option value="customer">Customer</option>
+    </select>
+  </div>
+  <div class="mb-3">
+  <input type="url" [(ngModel)]="empobj.avatar" placeholder="Enter avatar URL" name="avatar">
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click) ="onsaveempolye()">Submit </button>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+     <th  scope="col">id</th>
+      <th scope="col">Email</th>
+      <th scope="col">Name</th>
+      <th  scope="col">role</th>
+      <th scope="col">avatar</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+     <tr *ngFor="let user of employee; let i = index">
+          <td>{{i +1}}</td>
+   
+
+      <td>{{ user.email}}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.role }}</td>
+      <td>
+        <img [src]="user.avatar" alt="Avatar" width="40" height="40" />
+      </td>
+    <button class=" btn btn-outline-warning me-3">Deleted</button>
+   
+    </tr>
+   
+   
+  </tbody>
+</table>
+<mat-paginator [length]="19"
+              [pageSize]="7"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>

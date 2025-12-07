@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="row vh-100 align-items-center   ">
+     <div class="d-none d-lg-block col-lg-3"></div>
+    <div class="col-12 col-md-6 col-lg-4 text-center p-3   ">
+      <img [src]="imageurl" alt="logo" width="251px" height="106px" class="img-fluid">
+
+      <h2 class="fs-1 mt-4">Smarter Conversation</h2>
+      <h3>Faster Solution</h3>
+      <h4 class="text-muted">Tackle with Taqal</h4>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center">
+      <div class="login-card">
+        <div class="card shadow p-4">
+          <div class="card-body">
+            <h1 class="card-title mb-3 ">Welcome!</h1>
+            <p class="text-center mb-4">
+              Enter your credentials to access your account
+            </p>
+
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input
+                type="text"
+                [(ngModel)]="loginobj.emailId"
+                name="emailId"
+                class="form-control"
+                placeholder="Enter your username"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input
+                type="password"
+                [(ngModel)]="loginobj.password"
+                name="password"
+                class="form-control "
+                placeholder="Enter your password"
+              />
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+            <p ><mat-slide-toggle></mat-slide-toggle></p>
+              <h6 class="mb-0">
+                <a href="#" class="text-decoration-none text-dark">Forgot password?</a>
+              </h6>
+            </div>
+
+            <div class="d-grid gap-4">
+              <button class="btn fw-bold" type="button" (click)="onlogin()">Sign in</button>
+              <button class="btn button1 text-white fw-bold" type="button">
+                Sign in with TMC ID
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="file-upload-container">
+    <h2>File Upload</h2>
+
+    <input type="file" class="file-input-native"
+           [accept]="requiredFileType"
+           (change)="onFileSelected($event)" #fileUpload>
+
+    <div class="upload-controls-wrapper">
+        <div class="file-selection-area">
+            <span class="file-name-display">{{fileName || "No file selected yet."}}</span>
+            
+            <button mat-flat-button color="primary" class="select-file-btn"
+                    (click)="fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+                Select File
+            </button>
+        </div>
+
+        <button mat-flat-button color="accent" class="upload-file-btn"
+                (click)="uploadFile()" 
+                *ngIf="fileToUpload && !uploadProgress">
+            <mat-icon>cloud_upload</mat-icon>
+            Upload
+        </button>
+    </div>
+
+    <div class="progress-bar-area" *ngIf="uploadProgress">
+        <mat-progress-bar class="progress-bar" mode="determinate"
+                          [value]="uploadProgress"></mat-progress-bar>
+        
+        <span class="progress-label">{{uploadProgress}}%</span>
+
+        <button mat-icon-button color="warn" class="cancel-upload-btn" 
+                (click)="cancelUpload()">
+            <mat-icon>delete_forever</mat-icon>
+        </button>
+    </div>
+</div>
+
+---
+
+<div class="uploaded-documents" *ngIf="uploadedFiles.length > 0">
+    <h2>Uploaded Documents List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Size</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doc of uploadedFiles">
+                <td>{{ doc.name }}</td>
+                <td>{{ doc.size }} bytes</td>
+                <td>
+                    <a [href]="doc.url" target="_blank" class="view-file-link">
+                        View File
+                        <mat-icon>launch</mat-icon>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

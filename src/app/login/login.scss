@@ -1,0 +1,45 @@
+
+
+
+.login-card {
+  padding: 0.1rem;
+  box-shadow: 0 0 10px 5px rgba(255, 200, 0, 0.4);
+  border-radius: 15px;
+}
+.card{
+    border-radius: 15px;
+    border: none;
+}
+button{
+    background: linear-gradient(90deg, #F6AA1D 0%, #FFD555 100%);
+
+}
+.button1 {
+background: rgba(92, 92, 92, 1);
+
+}
+h2{
+ color:  #F6AA1D;
+font-weight: 600;
+
+}
+.form-control:focus{
+background-color: rgba(241, 241, 241, 0.81);
+border-color: transparent;
+box-shadow: none;        
+border-radius: 11px;
+}
+
+label{
+color:  rgba(118, 118, 118, 1);
+
+}
+
+.form-control {
+  background-color: rgba(241, 241, 241, 0.81) ;
+  border: 1px solid transparent !important;
+  box-shadow: none;
+  border-radius: 11px;
+  
+color:  rgba(118, 118, 118, 1);
+}

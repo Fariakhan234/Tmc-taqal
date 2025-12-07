@@ -1,0 +1,18 @@
+.top{
+    background: linear-gradient(90deg, #FBCE47 0%, #F6A311 98.53%);
+  border-radius: 6px;
+
+}
+.layout{
+margin: 5px;
+padding: 5px;
+display: flex;
+justify-content: space-between;
+}
+
+.button{
+    margin-right: 12px;
+background: rgba(57, 57, 57, 0.08);
+border-radius: 8px;
+border-color:rgba(57, 57, 57, 0.08) ;
+}
