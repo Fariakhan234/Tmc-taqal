@@ -1,10 +1,8 @@
-import { AfterViewChecked, Component, ElementRef, inject, ViewChild } from '@angular/core';
-import { Users } from '../services/users';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
