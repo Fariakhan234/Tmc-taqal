@@ -48,7 +48,27 @@
 
   text-align: center;
 }
+.icon-bg-cost {
 
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 16px; 
+  background-color: #EDE0FF; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-bg-cost1 {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 16px; 
+  background-color: #FFEFBE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (max-width: 992px) {
   .top {

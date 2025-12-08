@@ -1,10 +1,10 @@
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
-import { Users } from '../services/users';
-import { EmpModel, NewEmployee } from '../Model/users.model';
-import { AsyncPipe, CommonModule } from '@angular/common'; 
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { Modal } from 'bootstrap';
+import { EmpModel, NewEmployee } from '../Model/users.model';
+import { Users } from '../services/users';
 
 
 
@@ -61,6 +61,10 @@ else{
 alert('user created failed ')
     }
   });
+}
+delteemp(index:number){
+  this.employee.splice(index,1)
+
 }
   @ViewChild("newModel") newModel!: ElementRef;
 
