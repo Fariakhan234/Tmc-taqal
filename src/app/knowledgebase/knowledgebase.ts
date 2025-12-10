@@ -3,11 +3,18 @@ import { Component, Input, OnInit } from '@angular/core';
 import { finalize, Subscription } from 'rxjs';
 import { UploadedFile } from '../upload/upload';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
+export interface UploadedFiles {
+  name: string;
+  url: string;
+  size: number;
+  type: string;
+  date: string;
+}
 @Component({
   selector: 'app-knowledgebase',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './knowledgebase.html',
   styleUrls: ['./knowledgebase.scss']
 })
@@ -21,6 +28,7 @@ export class Knowledgebase implements OnInit {
   uploadedFiles: UploadedFile[] = [];
   fileToUpload: File | null = null;
   isupload = false;
+  
 
   constructor(private http: HttpClient) { }
 
@@ -99,6 +107,7 @@ export class Knowledgebase implements OnInit {
     this.isupload = false;
     this.fileName = '';
     this.uploadMessage = '';
+
   }
 deleteFile(file: UploadedFile): void {
    

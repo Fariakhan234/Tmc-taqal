@@ -40,6 +40,18 @@
   color: rgba(64, 64, 64, 1);
 }
 
+:host-context([data-bs-theme="dark"]) .chat-item {
+  background: rgba(255, 255, 255, 0.1) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+:host-context([data-bs-theme="dark"]) .chat-item span {
+  color: #ffffff !important;
+}
+
+:host-context([data-bs-theme="dark"]) .chat-item i {
+  color: #ffffff !important;
+}
 .chat-bubble1 {
   display: inline-block;
   max-width: 70%;

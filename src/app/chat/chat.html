@@ -1,6 +1,6 @@
 <div class="d-flex flex-column flex-md-row min-vh-100 p-0">
   <nav
-    class="sidebar d-flex flex-column p-3 bg-white border-end offcanvas-md offcanvas-left"
+    class="sidebar d-flex flex-column p-3 bg-body border-end offcanvas-md offcanvas-left"
     tabindex="-1"
     id="sidebarMenu"
     aria-labelledby="sidebarMenuLabel"
@@ -34,53 +34,53 @@
       <p>Today</p>
       <ul class="list-unstyled">
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dots text-body"></i>
           <span>Who is Elon Musk?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trash text-body"></i>
         </li>
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dots text-body"></i>
           <span>Who are you?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trash text-body"></i>
         </li>
       </ul>
        <p>7 Days</p>
       <ul class="list-unstyled">
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dotstext-body"></i>
           <span>Who is Elon Musk?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trash text-body"></i>
         </li>
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dots text-body"></i>
           <span>Who are you?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trash text-body"></i>
         </li>
       </ul>
        <p>7 Days</p>
       <ul class="list-unstyled">
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dots text-body"></i>
           <span>Who is Elon Musk?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trash text-body"></i>
         </li>
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dots text-body"></i>
           <span>Who are you?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trash text-body"></i>
         </li>
       </ul>
        <p>30 Days</p>
       <ul class="list-unstyled">
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dots text-body"></i>
           <span>Who is Elon Musk?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trashtext-body"></i>
         </li>
         <li class="chat-item d-flex justify-content-between align-items-center py-2 px-3 mb-2">
-          <i class="bi bi-chat-square-dots text-dark"></i>
+          <i class="bi bi-chat-square-dots text-body"></i>
           <span>Who are you?</span>
-          <i class="bi bi-trash text-dark"></i>
+          <i class="bi bi-trash text-body"></i>
         </li>
       </ul>
     </div>
@@ -104,7 +104,7 @@
   </nav>
 
 
-  <div class="flex-grow-1 bg-white p-3 p-md-5">
+  <div class="flex-grow-1 bg-body p-3 p-md-5">
   
     <button
       class="btn btn-warning text-white d-md-none mb-3"
@@ -116,8 +116,8 @@
       <i class="bi bi-list"></i> Menu
     </button>
 
-    <div class="card rounded-3 overflow-hidden h-100">
-      <div class="card-body d-flex flex-column bg-white custom-scroll-container">
+    <div class="card rounded-3 overflow-hidden h-100 ">
+      <div class="card-body d-flex flex-column bg-body custom-scroll-container">
         <div #scrollMe class="flex-fill overflow-auto p-4 position-relative">
           <div *ngIf="showPlaceholder" class="placeholder-text text-center">
             <h3 class="fw-bold mb-2">Hello <span class="text-warning">Taqal!</span></h3>
@@ -137,10 +137,10 @@
           </div>
         </div>
 
-        <div class="bg-white p-3">
+        <div class="bg-body p-3">
           <form class="d-flex" (ngSubmit)="sendMessage()">
             <input type="file" id="fileUpload" hidden>
-            <label for="fileUpload" class="btn b border me-2 textbutton">
+            <label for="fileUpload" class="btn b border me-2 textbutton ">
               <i class="bi bi-paperclip fs-5 rotate-clip"></i>
             </label>
             <input
