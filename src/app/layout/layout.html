@@ -13,7 +13,11 @@
       <div class="d-flex align-items-center gap-3">
         
         <a class="d-flex align-items-center text-decoration-none text-body">
-            <img src="assets/images/logo.png" alt="Logo" width="114px" height="48px">
+
+            <img [src]="isDarkMode ? 'assets/images/taql-white.png' : 'assets/images/logo.png'" 
+            alt="Logo" 
+            width="114px" 
+            height="48px">
         </a>
 
         <button class="btn  btn-sm" (click)="toggleTheme()">
