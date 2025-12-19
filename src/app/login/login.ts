@@ -12,35 +12,33 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   styleUrl: './login.scss'
 })
 export class Login{
-imageurl = 'assets/images/logo.png';
+ loginobj = {
+    emailId: '',
+    password: ''
+  };
+
+ 
+  imageurl = 'assets/images/logo.png'; 
+
+  showPassword = false;
+  rememberMe = false;
+
+ 
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+  }
 
 
-
-loginobj:UsersModel = new UsersModel();
-imagePath = 'assets/img/Frame.png';
-
-userservice = inject(Users)
-route= inject(Router)
-
-onlogin(){
-
-this.userservice.onlogin(this.loginobj).subscribe({
-  next:(result:any)=>{
-    if(result.result){
-      alert('login sucessfully')
-localStorage.setItem('user',JSON .stringify(result.data));
-this.route.navigateByUrl("/dashboard")
+  onlogin(): void {
+    
+    console.log('Login clicked', this.loginobj);
+    
+    
+    if (!this.loginobj.emailId || !this.loginobj.password) {
+      alert('Please enter both username and password');
+      return;
     }
-    else{
-      alert(result.message)
-    }
+   
+  }
+}
 
-  },
-error:()=>{
-  alert('api error')
-
-}
-  
-})
-}
-}
